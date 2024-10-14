@@ -36,7 +36,7 @@
             <div class="input-group justify-content-center">
               <%= f.text_field :discount_amount, class: 'form-control text-center my-1 w-50' %>
               <span class="input-group-btn">
-                <%= f.button Spree.t(:update), type: 'submit', class: 'btn btn-primary m-1' %>
+                <%= button Spree.t('actions.update'), 'save.svg', 'submit', { class: 'btn-primary m-1', data: { disable_with: "#{Spree.t(:saving)}..." } } %>
               </span>
             </div>
           <% end %>

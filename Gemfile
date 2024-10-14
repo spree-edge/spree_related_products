@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
-spree_version = 'master'
-gem 'spree', github: 'spree/spree', branch: spree_version
+gem 'rails', '7.1.3.4'
+
+spree_opts >= '4.8'
+gem 'spree', spree_opts
 gem 'rails-controller-testing'
 
 gemspec

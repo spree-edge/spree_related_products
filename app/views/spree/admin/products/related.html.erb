@@ -7,16 +7,16 @@
   <%= content_for :page_actions do %>
     <%=
       button_link_to(
-        Spree.t(:preview_product),
+        Spree.t(:preview),
         spree.product_url(@product),
-        class: 'btn-outline-secondary', icon: 'eye-open', id: 'admin_preview_product', target: :blank
+        class: 'btn-light', icon: 'view.svg', id: 'admin_preview_product', target: :blank
       )
     %>
   <% end %>
 <% end %>
 
 <% if @relation_types.empty? %>
-  <div class="alert alert-warning no-objects-found">
+  <div class="text-center no-objects-found m-5">
     <%= Spree.t(:no_relation_types) %>
   </div>
 <% else %>
@@ -46,7 +46,7 @@
             <div class="input-group">
               <%= text_field_tag :add_discount, 0.0, class: 'form-control text-center' %>
               <span class="input-group-btn">
-                <%= button_link_to Spree.t(:add), admin_product_relations_url(@product), icon: 'add', class: 'btn-success my-0', id: 'add_related_product', data: { update: 'products-table-wrapper' } %>
+                <%= button_link_to Spree.t(:add), admin_product_relations_url(@product), icon: 'add.svg', class: 'btn-primary my-0 mx-1', id: 'add_related_product', data: { update: 'products-table-wrapper' } %>
               </span>
             </div>
           </div>

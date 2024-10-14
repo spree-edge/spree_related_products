@@ -37,7 +37,7 @@
     </tbody>
   </table>
 <% else %>
-  <div class="alert alert-warning no-objects-found">
+  <div class="text-center no-objects-found m-5">
     <%= Spree.t(:no_resource_found, resource: Spree::RelationType.model_name.human(count: :many)) %>,
     <%= link_to Spree.t(:add_one), spree.new_admin_relation_type_path %>!
   </div>

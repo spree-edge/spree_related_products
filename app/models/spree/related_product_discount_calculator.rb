@@ -1,5 +1,7 @@
+require_dependency 'spree/calculator'
+
 module Spree
-  class Calculator::RelatedProductDiscount < Spree::Calculator
+  class RelatedProductDiscountCalculator < Spree::Calculator
     def self.description
       Spree.t(:related_product_discount)
     end
